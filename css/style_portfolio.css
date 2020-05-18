@@ -1,0 +1,229 @@
+/*
+font-family: 'Assistant', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+/* Bar de navigation avec animation */
+:root {
+    font-size: 16px;
+    font-family: 'Assistant', sans-serif;
+    --text-primary:rgb(129, 129, 129);
+    --text-secondary:#ffffff;
+    --text-corps:rgb(80, 80, 80);
+    --bg-primary:rgb(240, 240, 240);
+    --bg-secondary:rgb(141, 204, 58);
+    --bg-secondary-second:rgb(139, 85, 22);
+    --color-hover:#2b9e27;
+    --color-visible:rgb(135, 230, 80);
+    --transition-speed: 200ms;
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.45rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+body::-webkit-scrollbar-thumb {
+    background: #2b9e27;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: var(--transition-speed) ease;
+}
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.nav-item {
+    width: 100%;
+}
+.nav-item:last-child {
+    margin-top:auto;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color:var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.8);
+    transition: var(--transition-speed);
+}
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color : var(--text-secondary);
+}
+.link-text {
+    display: none;
+}
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem 0;
+    padding: 0;
+}
+
+.navbar:hover {
+    width: 16rem;
+}
+.navbar:hover .link-text {
+    display: block;
+}
+.fa-primary {
+    color: rgb(136, 86, 30);
+    transition: var(--transition-speed);
+}
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0ch;
+    width: 100%;
+}
+.logo span{
+    padding-left: 1.5rem;
+}
+.logo svg{
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+.navbar:hover .logo svg {
+    transform: rotate(-270deg);
+}
+
+/* Bar de navigation animé */
+
+
+/*                              Page main                        */ 
+.main{
+    margin: 0;
+    padding: 0;
+}
+/* Container */
+.container{
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 0;
+background-color: var(--bg-primary);
+height: 85vh;
+padding: 1rem;
+border-radius: 1rem;
+}
+
+.partie{
+    height: max-content ;
+    min-height: 67%;
+    background-image: url(/images/baniere_portfolio.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
+.partie h1{
+    padding-top: 12rem;
+    margin: 0;
+    transition: 250ms;
+}
+.partie h1:hover{
+    transform: scale(1.5,1.5) translateY(-1.8rem);
+    transition: 250ms;
+}
+
+.partie h2{
+    color: var(--bg-secondary-second);
+    transition: 250ms;
+}
+.partie h2:hover{
+    transform: scale(1.5,1.5);
+    transition: 250ms;
+}
+
+.partie h3{
+    color: var(--color-visible);
+    filter: opacity(0.8);
+    text-shadow: black 1px 0 10px;
+    transition: 250ms;
+}
+.partie h3:hover{
+    transform: scale(1.5,1.5);
+    transition: 250ms;
+}
+.partie_2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+
+.types{
+    display: flexbox;
+    background-color: var(--bg-secondary);
+    width: 15rem;
+    height: 10.5rem;
+    padding-top: 4.5rem;
+}
+.partie_2 a{
+    text-decoration: none;
+    color: var(--color-visible);
+    text-shadow: black 1px 0 10px;
+    margin: auto;
+    transition: 300ms;
+}
+.partie_2 a:hover{
+    transition: 300ms;
+    transform:scale(1.2,1.2) translateY(-2rem);
+}
+
+#t1{
+    margin-left: 0;
+    margin-right: auto;
+    background-image: url(/images/pao\ dao.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+#t2{
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/images/déssin.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+#t3{
+    margin-left: auto;
+    margin-right: 0;
+    background-image: url(/images/page\ blanche.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+/* Container */
+

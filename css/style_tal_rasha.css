@@ -1,0 +1,152 @@
+/*
+font-family: 'Assistant', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+/* Bar de navigation avec animation */
+:root {
+    font-size: 16px;
+    font-family: 'Assistant', sans-serif;
+    --text-primary:rgb(129, 129, 129);
+    --text-secondary:#ffffff;
+    --text-corps:rgb(80, 80, 80);
+    --bg-primary:rgb(240, 240, 240);
+    --bg-secondary:rgb(141, 204, 58);
+    --bg-secondary-second:rgb(139, 85, 22);
+    --color-hover:#2b9e27;
+    --color-visible:rgb(135, 230, 80);
+    --transition-speed: 200ms;
+}
+
+
+body {
+    color: black;
+    background-color: white;
+    background-image: url(/images/travaux.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.45rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+body::-webkit-scrollbar-thumb {
+    background: #2b9e27;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: var(--transition-speed) ease;
+}
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.nav-item {
+    width: 100%;
+}
+.nav-item:last-child {
+    margin-top:auto;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color:var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.8);
+    transition: var(--transition-speed);
+}
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color : var(--text-secondary);
+}
+.link-text {
+    display: none;
+}
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem 0;
+    padding: 0;
+}
+
+.navbar:hover {
+    width: 16rem;
+}
+.navbar:hover .link-text {
+    display: block;
+}
+.fa-primary {
+    color: rgb(136, 86, 30);
+    transition: var(--transition-speed);
+}
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0ch;
+    width: 100%;
+}
+.logo span{
+    padding-left: 1.5rem;
+}
+.logo svg{
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+.navbar:hover .logo svg {
+    transform: rotate(-270deg);
+}
+
+/* Bar de navigation animé */
+
+
+/*                              Page main                        */ 
+
+/* Container */
+.container{
+    margin: 0;
+    padding: 0;
+    font-size: 5rem;
+    color: black;
+    justify-content: center;
+    text-align: center;
+}
+.container h1{
+    text-shadow: white 1px 0 20px;
+}
+.container a{
+    color: var(--bg-secondary-second);
+    transition: 500ms ease;
+}
+.container a:hover{
+    color: var(--color-visible);
+    transition: 500ms ease;
+}
+
+/* Container */
+

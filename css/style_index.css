@@ -1,0 +1,217 @@
+/* Général */
+/*
+Google font : 
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    font-family: 'Raleway', sans-serif;
+Couleurs:
+	bleu : #33A2FF
+	bleu foncé : #287DC3
+	bleu clair : #95CFFF
+Bulma : https://bulma.io/
+	<link rel="stylesheet" href="bulma.css">
+Jquery : <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+Fontawesome: <script src="https://kit.fontawesome.com/9c70f3f76b.js" crossorigin="anonymous">
+*/
+
+:root {
+    font-size: 16px;
+    font-family: 'Assistant', sans-serif;
+    --text-primary:rgb(170, 169, 169);
+    --text-secondary:#ffffff;
+    --text-corps:rgb(80, 80, 80);
+    --bg-primary:rgb(240, 240, 240);
+    --bg-secondary:rgb(192, 148, 98);
+    --bg-secondary-second:rgb(139, 85, 22);
+    --color-visible:rgb(135, 230, 80);
+    --color-hover:#2b9e27;
+    --transition-speed-back: 500ms;
+    --transition-speed-up: 0.9s;
+}
+
+.body{
+    background-color: rgb(255, 255, 255);
+}
+/* Général */
+
+/* Topbar*/
+
+.topbar{
+    width: 100%;
+    height: 25px;
+    background-color: var(--bg-secondary-second);
+    background-image: url(/images/texture_bois.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Topbar */
+
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: 70% calc(30% - 1rem);
+    grid-gap: 1rem;
+}
+
+
+
+
+/* colonne 1 */
+.colonne1 {
+    margin: 0;
+    padding-left:8rem;
+    padding-right:2rem;
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+.name {
+    margin:2rem;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--text-corps);
+    letter-spacing: 0rem;
+    text-transform: uppercase;
+    transition: var(--transition-speed-back);
+}
+.name:hover{
+    transition: var(--transition-speed-up) ease;
+    transform: translateX(7rem);
+    color: var(--color-visible);
+}
+.presentation {
+    margin: 2rem;
+    font-size: 12rem;
+    font-weight: bolder;
+    color: var(--bg-secondary);
+    letter-spacing: 1rem;
+    transition: var(--transition-speed-back);
+}
+.presentation:hover{
+    transition: var(--transition-speed-up) ease;
+    transform: translateX(7rem);
+    color: var(--color-visible);
+}
+#pr2 {
+    padding-left:6rem;
+}
+.decouverte {
+    margin: 2rem;
+    padding-top:2rem;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: var(--bg-secondary);
+    transition: var(--transition-speed-back);
+}
+.decouverte:hover {
+    transition: var(--transition-speed-up) ease;
+    transform: translateX(7rem);
+    color: var(--color-visible);
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    color: var(--bg-secondary);
+    transition: var(--transition-speed-back);
+}
+/*
+.description:hover {
+    transition: var(--transition-speed-up) ease;
+    transform: translateX(7rem);
+    color: var(--color-visible);
+}
+*/
+
+.ds_col1{
+    padding: 1rem;
+    text-align: right;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    transition: 0.05s;
+}
+.ds_col1:hover{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    transition: 0.05s;
+    color:var(--color-visible);
+}
+.ds_col2{
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    transition: 0.05s;
+}
+.ds_col2:hover{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    transition: 0.05s;
+    color:var(--color-visible);
+}
+
+
+/* colonne 2 */
+.colonne2 {
+    display: block;
+    margin: 0;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(1, 132, 255, 0.247);
+    background-image: url(/images/texture_bois_claire.jpg);
+    background-size: 100%;
+}
+.photo{
+    transition: var(--transition-speed-back);
+}
+.photo:hover{
+    transition: var(--transition-speed-up) ease;
+    transform: translateX(1rem) translateY(-1rem);
+}
+
+.photo img{
+    width: 85%;
+    margin-left: -21rem;
+    margin-top: 5rem;
+}
+.direction {
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    margin-left: -9rem;
+    font-weight: lighter;
+    line-height: 2rem;
+    color: var(--bg-secondary-second);
+    margin-bottom: 6rem;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition-speed-back);
+}
+.direction p{
+    text-shadow: rgba(109, 67, 18, 0.829) 1px 0px 5px;
+}
+.direction:hover {
+    transition: var(--transition-speed-up) ease;
+    transform: translateY(1rem);
+    color: var(--color-visible);
+}
+
+.bouton {
+    display: block;
+    background-image: url(../images/Bouton_blanc.png);
+    text-decoration: none;
+    text-transform: inherit;
+    line-height: 75px;
+    width: 200px;
+    margin: auto;
+    margin-top: 1rem;
+}
+.bouton:hover {
+    background-image: url(../images/Bouton_blanc_hover.png);
+}
+.bouton a{
+    text-decoration: none;
+    color: var(--text-corps);
+    font-style: oblique;
+}
+
+/* Container */
